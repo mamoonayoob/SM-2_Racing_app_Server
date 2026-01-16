@@ -13,9 +13,9 @@ app.use(
 );
 //Router import here
 //auth routes 
-const authRoutes=require("./Routes/authRoutes");
+const authRoutes=require("./Routes/authRoutes"); 
 const eventRoutes=require("./Routes/eventRoutes");
-const runGroupRoutes = require("./Routes/runGroupRoutes");
+const runGroupRoutes = require("./Routes/runGroupRoutes"); 
 const submissionRoutes = require("./Routes/submissionRoutes");
 
 
