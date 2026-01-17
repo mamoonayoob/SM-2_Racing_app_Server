@@ -7,7 +7,7 @@ app.use(express.json());
 db_Connection();
 app.use(
   cors({
-    origin: ["*","http://localhost:3000","https://sm-2-racing-frontend.vercel.app"],
+    origin: ["*","https://sm-2-racing-frontend.vercel.app"],
     credentials: true,
   })
 );
