@@ -1,5 +1,4 @@
 const express = require("express");
-const serverless = require("serverless-http");
 const db_Connection = require("./Config/DbConnection/db_Connection");
 const cors = require("cors");
 require("dotenv").config();
@@ -8,7 +7,7 @@ app.use(express.json());
 db_Connection();
 app.use(
   cors({
-    origin: "*",
+    origin: ["*","http://localhost:3000","https://sm-2-racing-frontend.vercel.app"],
     credentials: true,
   })
 );
@@ -33,8 +32,7 @@ app.use("/api/submission", submissionRoutes);
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
-// const port = process.env.PORT || 5000;
-// app.listen(port, () => {
-//   console.log(`Example app listening on port ${port}`);
-// });
-module.exports.handler = serverless(app);
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});

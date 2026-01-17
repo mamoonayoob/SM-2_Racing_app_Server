@@ -8,7 +8,7 @@ module.exports.sendToMake = async (data) => {
       {
         headers: {
           "Content-Type": "application/json",
-        },
+        }, 
         timeout: 8000,
       }
     );
